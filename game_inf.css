@@ -128,7 +128,6 @@ main {
 .cube {
     display: flex;
     position: relative;
-    /* justify-content: flex-end; */
     width: 500px;
     height: 160px;
     background-color: #CCCCCC;
@@ -165,7 +164,7 @@ main {
     cursor: pointer;
 }
 .ready-button:hover {
-    background-color: #4ecf88;
+    background-color: #4ab67b;
 }  
 .ready-button:before {
     content: '✔️';
@@ -246,4 +245,49 @@ main {
 
 .answer-button:hover {
     background-color: #4ecf88;
+}
+.leader-button {
+    font-family: "Bebas Neue", sans-serif;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(236, 236, 101);
+    border: none;
+    font-size: 30px;
+    color: #434343;
+    position: absolute;
+    left: 27.4%;
+    top: 33%;
+}
+
+.leader-button:hover {
+    background-color: rgb(212, 212, 90);
+    cursor: pointer;
+}
+.button-container {
+    position: absolute;
+    left: 100%;
+    top: 25%;
+}
+
+.center-button {
+    left: 100%;
+    top: 50%;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
