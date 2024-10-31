@@ -1,2 +1,2 @@
-package main
-
+// package main
+// я сын бляди 
