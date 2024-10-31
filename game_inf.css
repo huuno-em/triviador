@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Spicy+Rice&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.toggle-text, .next-question {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 24px;
+    color: #434343;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+header, footer {
+    font-family: "Lexend", sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: #CCCCCC;
+    text-align: center;
+    padding: 15px;
+    flex: 0 0 70px;
+    color: #434343;
+}
+main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+    background-color: white;
+    padding-left: 20px;
+}
+.timer-container {
+    width: 100%;
+    height: 30px;
+    background-color: #CCCCCC;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+.timer-bar {
+    margin-bottom: 10px;
+    height: 100%;
+    background-color: #76c7c0;
+    position: absolute;
+    border-radius: 50px;
+}
+.info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+}
+.waiting-players {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 100px;
+    margin-bottom: 90px;
+    width: 1200px;
+    height: 250px;
+    background-color: #CCCCCC;
+    border-radius: 50px;
+}
+.next-question {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 90px;
+    width: 1200px;
+    height: 250px;
+    background-color: #CCCCCC;
+    border-radius: 50px;
+}
+.info-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 90px;
+    width: 1200px;
+    height: 250px;
+    background-color: #CCCCCC;
+    border-radius: 50px;
+}
+.input-field {
+    width: 1200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    background-color: #CCCCCC;
+}
+.input-group {
+    position: relative;
+}
+.submit-button {
+    position: absolute; 
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 8px 12px;
+    margin-left: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5ae995;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+}
+.submit-button:hover {
+    background-color: #4ecf88;
+}
+.cubes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cube {
+    display: flex;
+    position: relative;
+    /* justify-content: flex-end; */
+    width: 500px;
+    height: 160px;
+    background-color: #CCCCCC;
+    margin: 10px;
+    opacity: 0;    
+    animation: appear 0.5s forwards;   
+    border-radius: 25px; 
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.cube.ready {
+    background-color: #5ae995;   
+}
+.ready-button {
+    margin-left: 5px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #5ae995;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.ready-button:hover {
+    background-color: #4ecf88;
+}  
+.ready-button:before {
+    content: '✔️';
+    font-size: 20px;
+}  
+#gameInfoContainer, #questionContainer, #timerContainer, #inputGroup {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 24px;
+    color: #434343;
+}
+#gameInfoContainer.pointer-events-auto {
+    pointer-events: auto;
+}
+#gameInfoContainer.opacity-one {
+    opacity: 1;
+}
+.hidden {
+    display: none;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    width: 226px;
+    font-size: 18px;
+    color: #434343;
+    background-color: #D9D9D9;
+    border-radius: 25px 0px 25px 0px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 30px;
+}
+.score:after {
+    content: '⭐';
+    margin: 0px 0px 5px 5px;
+}
+.score-container {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.player-name {
+    font-size: 30px;
+    margin: 20px 0;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.indicator {
+    margin: 25px 10px; 
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.avatar {
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 33px;
+    background-color: #D9D9D9;
+}
+.answer-button {
+    width: 200px;
+    height: 60px;
+    margin: 10px;
+    border: none;
+    background-color: #76c7c0;
+    border-radius: 10px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.answer-button:hover {
+    background-color: #4ecf88;
+}

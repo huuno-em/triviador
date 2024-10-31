@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIVIADOR</title>
+    <link rel="stylesheet" href="game_inf.css">
+    <script src="player.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>TRIVIADOR</h1>
+    </header>
+
+    <main>
+        <div class="cubes-container" id="cubes"></div>
+
+        <div class="waiting-players" id="waitingPlayers">
+            <p class="toggle-text" id="toggleText">Ожидание игроков...</p>
+        </div>
+
+        <div class="next-question hidden" id="nextQuestion">
+
+        </div>
+
+        <div class="info-container hidden" id="gameInfoContainer">
+
+            <div class="info-text " id="info-text">
+                <div class="question " id="questionContainer"></div>
+            </div>
+
+            <div class="timer-container " id="timerContainer">
+                <div class="timer-bar " id="timerBar"></div>
+            </div>
+
+            <div class="input-group" id="inputGroup">
+                <input type="text" class="input-field " id="answerInput" placeholder="Ваш ответ здесь">
+                <button class="submit-button " id="submitButton">Подтвердить</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+
+    </footer>
+</body>
+</html>
